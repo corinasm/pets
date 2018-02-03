@@ -1,0 +1,19 @@
+<div id="det_wrapper">
+  <p><a [routerLink]="['/']">Home</a></p>
+  <h2>Details about {{selectedPet.name}}</h2>
+
+  <p><strong>Pet Type:</strong> {{selectedPet.type}}
+  <p><strong>Description:</strong> {{selectedPet.description}}
+  <p><strong>Skills:</strong> 
+     <ul style="list-style-type:none">
+        <li>{{selectedPet.skill1}}</li>
+        <li>{{selectedPet.skill2}}</li>
+        <li>{{selectedPet.skill3}}</li>
+      </ul>
+  <p><strong>Likes:</strong> {{like_count}} </p>
+
+    <button class = "button_norm" type="button" (click)="incrementLikes((selectedPet._id))">Like this pet</button> &nbsp;&nbsp;&nbsp;    
+    <button class = "button_del" type="button" (click)="deletePet(selectedPet._id)">Adopt this pet</button> &nbsp;&nbsp;&nbsp; 
+
+
+</div>

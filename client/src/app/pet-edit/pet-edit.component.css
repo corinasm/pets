@@ -1,0 +1,29 @@
+#edit-wrapper {
+    margin: 0px auto; 
+    width: 100%;
+}
+h2 {
+    text-align: center;
+}
+.form_field {
+    width: 400px;
+    height: 25px;
+    padding: 5px;
+    vertical-align: center;
+    border: 1px solid #8a8a8a;
+    border-radius: 3px;
+}
+
+.form_field_short {
+    width: 350px;
+    height: 25px;
+    padding: 5px;
+    vertical-align: center;
+    border: 1px solid #8a8a8a;
+    border-radius: 3px;
+}
+.center_form
+{
+     margin: 0 auto;
+     width: 468px;
+}

@@ -1,0 +1,39 @@
+<div id="add_wrapper">
+    <h2>Know a pet needing a home?</h2>
+     
+    <div class="center_form">
+  
+        <div class="error" *ngIf="errors">  
+  
+            <ul style="list-style-type:none">
+              <li>{{ errors.errors.name.message }}</li>
+              <li>{{ errors.errors.type.message }}</li>
+              <li>{{ errors.errors.description.message }}</li>
+            </ul>
+        </div>		
+          
+          <form (submit) = "addPet()">
+        <p>Pet name:</p> 
+        <p><input type="text" class="form_field" name="newPet.name" [(ngModel)] = "newPet.name"/></p>
+        
+        <p>Pet Type:</p>
+        <p><input type="text" class="form_field" name="newPet.type" [(ngModel)] = "newPet.type"/></p>
+         
+        <p>Description:</p>
+        <p><input type="text" class="form_field" name="newPet.description" [(ngModel)] = "newPet.description"/></p>
+
+        <p>Skills (optional):</p>
+        
+        <p> Skill 1:&nbsp;&nbsp;<input type="text" class="form_field_short" name="newPet.skill1" [(ngModel)] = "newPet.skill1"/></p>    
+        <p> Skill 2:&nbsp;&nbsp;<input type="text" class="form_field_short" name="newPet.skill2" [(ngModel)] = "newPet.skill2"/></p> 
+        <p> Skill 3:&nbsp;&nbsp;<input type="text" class="form_field_short" name="newPet.skill3" [(ngModel)] = "newPet.skill3"/></p>    
+
+          <button class = "button_norm" type="submit">Add Pet</button> &nbsp;&nbsp;
+          <button class = "button_del" type="reset" [routerLink]="['/']">Cancell</button>
+      </form>
+    </div>
+  
+  
+  </div>	
+  
+  
